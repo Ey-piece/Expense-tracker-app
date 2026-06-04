@@ -41,6 +41,7 @@ class _ExpensesState extends State<Expenses> {
   void _openAddExpenseOverlay() {
     //.....
     showModalBottomSheet(
+      isScrollControlled: true, //the modal overlay use full available height
       context: context,
       builder: (ctx) => NewExpense(addExpense: _addExpense),
     );
